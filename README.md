@@ -1,6 +1,6 @@
-# Formation Concept
+# Organizational Vision
 
-One-page website for an early-stage nonprofit formation concept — a public-interest environmental and energy information institute.
+One-page website for an early-stage nonprofit — a public-interest environmental and energy information institute.
 
 ## Local preview
 

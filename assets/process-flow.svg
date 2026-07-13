@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Standalone horizontal process-flow. Live site inlines SVG so page fonts/animation apply. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 200" width="1020" height="200" role="img" aria-labelledby="processTitle processDesc">
+  <title id="processTitle">Process flow for informed environmental and energy decisions</title>
+  <desc id="processDesc">Horizontal process from open access data and information through technical analysis, stakeholder engagement, decision support, and implementation and evaluation, leading to better decisions and better outcomes.</desc>
+  <defs>
+    <linearGradient id="outcomeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f9170"/>
+      <stop offset="45%" stop-color="#347A5C"/>
+      <stop offset="100%" stop-color="#2a6450"/>
+    </linearGradient>
+    <filter id="outcomeShadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#18375C" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M2,2 L5,5 L2,8" fill="none" stroke="#347A5C" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style type="text/css"><![CDATA[
+      .step-box { fill: #FFFFFF; stroke: #18375C; stroke-width: 1.75; }
+      .step-label {
+        font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        fill: #18375C;
+        text-anchor: middle;
+      }
+      .icon { fill: none; stroke: #347A5C; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+      .connector { stroke: #347A5C; stroke-width: 1.75; fill: none; }
+      .outcome-label {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 14.5px;
+        font-weight: 600;
+        fill: #FFFFFF;
+        text-anchor: middle;
+      }
+    ]]></style>
+  </defs>
+
+  <g transform="translate(16 28)">
+    <rect class="step-box" width="136" height="118" rx="12" ry="12"/>
+    <g class="icon" transform="translate(52 16)">
+      <ellipse cx="16" cy="7" rx="12" ry="4"/>
+      <path d="M4 7v9c0 2.2 5.4 4 12 4s12-1.8 12-4V7"/>
+      <path d="M4 16v9c0 2.2 5.4 4 12 4s12-1.8 12-4v-9"/>
+    </g>
+    <text class="step-label" x="68" y="78">Open Access</text>
+    <text class="step-label" x="68" y="96">Data &amp; Information</text>
+  </g>
+  <path class="connector" d="M152 87 H172" marker-end="url(#arrowHead)"/>
+
+  <g transform="translate(180 48)">
+    <rect class="step-box" width="136" height="118" rx="12" ry="12"/>
+    <g class="icon" transform="translate(52 14)">
+      <path d="M4 34V6"/>
+      <path d="M4 34h24"/>
+      <path d="M10 34V20"/>
+      <path d="M17 34V12"/>
+      <path d="M24 34V16"/>
+    </g>
+    <text class="step-label" x="68" y="78">Technical</text>
+    <text class="step-label" x="68" y="96">Analysis</text>
+  </g>
+  <path class="connector" d="M316 107 H336" marker-end="url(#arrowHead)"/>
+
+  <g transform="translate(344 28)">
+    <rect class="step-box" width="136" height="118" rx="12" ry="12"/>
+    <g class="icon" transform="translate(52 16)">
+      <circle cx="11" cy="10" r="4"/>
+      <circle cx="23" cy="10" r="4"/>
+      <circle cx="17" cy="24" r="4"/>
+      <path d="M14 13.5l-1 6.5M20 13.5l1 6.5M12.5 24h9"/>
+    </g>
+    <text class="step-label" x="68" y="78">Stakeholder</text>
+    <text class="step-label" x="68" y="96">Engagement</text>
+  </g>
+  <path class="connector" d="M480 87 H500" marker-end="url(#arrowHead)"/>
+
+  <g transform="translate(508 48)">
+    <rect class="step-box" width="136" height="118" rx="12" ry="12"/>
+    <g class="icon" transform="translate(52 14)">
+      <rect x="2" y="4" width="16" height="12" rx="1.5"/>
+      <path d="M7 16v10h8"/>
+      <circle cx="25" cy="24" r="6"/>
+      <path d="M25 20.5v3.5l2.2 2.2"/>
+    </g>
+    <text class="step-label" x="68" y="78">Decision</text>
+    <text class="step-label" x="68" y="96">Support</text>
+  </g>
+  <path class="connector" d="M644 107 H664" marker-end="url(#arrowHead)"/>
+
+  <g transform="translate(672 28)">
+    <rect class="step-box" width="136" height="118" rx="12" ry="12"/>
+    <g class="icon" transform="translate(52 14)">
+      <path d="M12 4h12v5H12V4z"/>
+      <rect x="7" y="7" width="22" height="26" rx="2"/>
+      <path d="M13 20l3.5 3.5 7-7"/>
+      <path d="M13 30h11"/>
+    </g>
+    <text class="step-label" x="68" y="78">Implementation</text>
+    <text class="step-label" x="68" y="96">&amp; Evaluation</text>
+  </g>
+  <path class="connector" d="M808 87 H824" marker-end="url(#arrowHead)"/>
+
+  <g transform="translate(832 34)">
+    <rect width="168" height="122" rx="14" ry="14" fill="url(#outcomeGrad)" stroke="#122a47" stroke-width="2" filter="url(#outcomeShadow)"/>
+    <text class="outcome-label" x="84" y="54">Better Decisions</text>
+    <text class="outcome-label" x="84" y="82">Better Outcomes</text>
+  </g>
+</svg>

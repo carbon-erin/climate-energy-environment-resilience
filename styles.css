@@ -1,4 +1,4 @@
-/* Formation Concept — public-interest research institute one-pager */
+/* Organizational Vision — public-interest research institute one-pager */
 
 :root {
   --navy: #18375c;
@@ -465,6 +465,14 @@ ol {
   line-height: 1.5;
 }
 
+.prose-highlight {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.5;
+}
+
 .check-list {
   margin: 0 0 var(--space-md);
   display: grid;
@@ -582,86 +590,31 @@ ol {
   font-weight: 700;
 }
 
-/* ——— How it fits / triangle ——— */
+/* ——— How we work ——— */
 
-.how-it-fits {
+.how-we-work {
   background: var(--section-gray);
 }
 
-.framework {
-  display: grid;
-  gap: var(--space-lg);
-  align-items: center;
+.how-we-work-prose {
   margin-top: var(--space-md);
+  max-width: 46rem;
 }
 
-.triangle-figure {
-  margin: 0;
-  text-align: center;
-  color: var(--navy);
-}
-
-.triangle-svg {
-  width: 100%;
-  max-width: 26rem;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-  overflow: visible;
-}
-
-.triangle-outline {
-  stroke: var(--navy);
-}
-
-.triangle-node-ring {
-  fill: var(--white);
-  stroke: var(--forest);
-  stroke-width: 1.5;
-}
-
-.triangle-node {
-  fill: var(--forest);
-}
-
-.triangle-compass-disc {
-  fill: var(--white);
-  stroke: rgba(52, 122, 92, 0.28);
-  stroke-width: 1.25;
-}
-
-.triangle-compass {
-  color: var(--forest);
-  fill: currentColor;
-}
-
-.triangle-label {
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  fill: var(--navy);
-}
-
-.triangle-outcome {
-  margin-top: var(--space-sm);
-  padding-top: var(--space-sm);
-  border-top: 2px solid rgba(52, 122, 92, 0.35);
-  display: inline-block;
+.work-callout {
+  margin-top: var(--space-lg) !important;
+  margin-bottom: 0 !important;
+  margin-left: clamp(1.5rem, 8vw, 4.5rem);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--white);
+  border: 1.5px solid var(--navy);
+  border-left: 4px solid var(--forest);
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  color: var(--forest);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.framework-copy {
-  max-width: 28rem;
-}
-
-.framework-copy p {
-  color: var(--slate-muted);
+  color: var(--navy);
+  line-height: 1.5;
+  max-width: 38rem;
 }
 
 /* ——— Program areas ——— */
@@ -689,25 +642,25 @@ ol {
 }
 
 .program-card p {
-  margin: 0;
+  margin: 0 0 0.65rem;
   color: var(--slate-muted);
   max-width: 48rem;
 }
 
+.program-card p:last-child {
+  margin-bottom: 0;
+}
+
 @media (min-width: 700px) {
   .program-card {
-    grid-template-columns: minmax(10rem, 14rem) 1fr;
+    grid-template-columns: minmax(11rem, 15.5rem) 1fr;
     gap: var(--space-md);
-    align-items: baseline;
+    align-items: start;
     padding: var(--space-md) 0;
   }
 }
 
-/* ——— Why matters / Status ——— */
-
-.why-matters {
-  background: var(--section-gray);
-}
+/* ——— Status ——— */
 
 .status {
   background: var(--white);
@@ -778,16 +731,11 @@ ol {
   .card-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .framework {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-  }
 }
 
 @media (min-width: 1000px) {
   .card-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
