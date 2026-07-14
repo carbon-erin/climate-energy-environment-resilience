@@ -198,16 +198,24 @@ ol {
   color: var(--navy);
 }
 
+.site-nav a.is-active {
+  color: var(--navy);
+  box-shadow: inset 0 -2px 0 var(--forest);
+}
+
 .site-nav .nav-cta {
   color: var(--forest);
   border-bottom: 1.5px solid transparent;
   padding-bottom: 0.1rem;
-  transition: border-color 0.25s var(--ease), color 0.2s var(--ease);
+  transition: border-color 0.25s var(--ease), color 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
 }
 
-.site-nav .nav-cta:hover {
+.site-nav .nav-cta:hover,
+.site-nav .nav-cta.is-active {
   border-bottom-color: var(--forest);
   color: var(--forest);
+  box-shadow: none;
 }
 
 .nav-toggle {
@@ -454,8 +462,18 @@ ol {
 .section-intro {
   font-size: 1.1rem;
   color: var(--slate-muted);
-  max-width: 38rem;
+  max-width: 42rem;
   margin-bottom: var(--space-lg);
+}
+
+.section-intro p {
+  margin: 0 0 0.75rem;
+  color: var(--slate-muted);
+  max-width: 42rem;
+}
+
+.section-intro p:last-child {
+  margin-bottom: 0;
 }
 
 .prose p {
@@ -527,10 +545,37 @@ ol {
   margin: 0;
 }
 
-/* ——— What We Do cards ——— */
+/* ——— How We Help (capabilities) ——— */
 
-.what-we-do {
-  background: var(--white);
+.how-we-help {
+  background: var(--navy);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.how-we-help .section-label {
+  color: #7eb89a;
+}
+
+.how-we-help h2,
+.how-we-help h3 {
+  color: var(--white);
+}
+
+.how-we-help .section-intro,
+.how-we-help .section-intro p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.how-we-help .card-examples-label {
+  color: #a8d4bc;
+}
+
+.how-we-help .card-examples li {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.how-we-help .card-examples li::before {
+  color: #7eb89a;
 }
 
 .card-grid {
@@ -539,30 +584,30 @@ ol {
   grid-template-columns: 1fr;
 }
 
-.card {
-  border: 1px solid var(--rule);
-  background: var(--white);
+.capability-card {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
 }
 
-.card-icon {
+.capability-card .card-icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: var(--forest);
+  color: #7eb89a;
   margin-bottom: var(--space-sm);
 }
 
-.card-icon svg {
+.capability-card .card-icon svg {
   width: 100%;
   height: 100%;
 }
 
-.card p {
-  color: var(--slate-muted);
+.capability-card p {
+  color: rgba(255, 255, 255, 0.72);
   font-size: 0.98rem;
-  flex-grow: 0;
+  margin-bottom: 0.65rem;
 }
 
 .card-examples-label {
@@ -577,6 +622,7 @@ ol {
 .card-examples {
   display: grid;
   gap: 0.25rem;
+  margin-top: 0;
 }
 
 .card-examples li {
@@ -594,77 +640,30 @@ ol {
   font-weight: 700;
 }
 
-/* ——— How we work ——— */
+/* ——— Focus Areas (domains) ——— */
 
-.how-we-work {
+.focus-areas {
   background: var(--section-gray);
 }
 
-.how-we-work-prose {
-  margin-top: var(--space-md);
-  max-width: 46rem;
-}
-
-.work-callout {
-  margin-top: var(--space-lg) !important;
-  margin-bottom: 0 !important;
-  margin-left: clamp(1.5rem, 8vw, 4.5rem);
-  padding: var(--space-md) var(--space-lg);
-  background: var(--white);
-  border: 1.5px solid var(--navy);
-  border-left: 4px solid var(--forest);
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--navy);
-  line-height: 1.5;
-  max-width: 38rem;
-}
-
-/* ——— Program areas ——— */
-
-.program-areas {
-  background: var(--white);
-}
-
-.program-list {
+.focus-grid {
   display: grid;
-  gap: var(--space-sm);
-  margin-top: var(--space-md);
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
 }
 
-.program-card {
-  display: grid;
-  gap: 0.35rem;
-  padding: var(--space-md) 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: none;
+.focus-card {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--forest);
+  padding: var(--space-md);
 }
 
-.program-card:last-child {
-  border-bottom: 1px solid var(--rule);
-}
-
-.program-card p {
-  margin: 0 0 0.65rem;
+.focus-card p {
   color: var(--slate-muted);
-  max-width: 48rem;
+  font-size: 0.98rem;
+  margin-bottom: 0.65rem;
 }
-
-.program-card p:last-child {
-  margin-bottom: 0;
-}
-
-@media (min-width: 700px) {
-  .program-card {
-    grid-template-columns: minmax(11rem, 15.5rem) 1fr;
-    gap: var(--space-md);
-    align-items: start;
-    padding: var(--space-md) 0;
-  }
-}
-
-/* ——— Status ——— */
 
 .status {
   background: var(--white);
@@ -732,14 +731,19 @@ ol {
     gap: 0.45rem 2rem;
   }
 
-  .card-grid {
+  .card-grid,
+  .focus-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (min-width: 1000px) {
-  .card-grid {
+  .capability-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .focus-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
