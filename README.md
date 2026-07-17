@@ -1,6 +1,8 @@
 # Organizational Vision
 
-One-page website for an early-stage nonprofit — a public-interest environmental and energy information institute.
+One-page website for an early-stage nonprofit — a non-partisan, science-driven public-interest organization that develops information resources, research, maps, tools, and stakeholder-informed insights for environmental and energy challenges.
+
+Homepage sections: Why This Organization, What We Create, Focus Areas, How We Work, Current Status.
 
 ## Local preview
 

@@ -386,46 +386,11 @@ ol {
   line-height: 1.65;
 }
 
-.hero-inner > .hero-lede:last-of-type {
-  margin-bottom: var(--space-lg);
-}
-
-.hero-seeking {
-  margin-bottom: var(--space-lg);
-  max-width: 36rem;
-}
-
-.hero-seeking-title {
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #8fc4a8;
-  margin-bottom: 0.75rem;
-}
-
-.hero-seeking ul {
-  display: grid;
-  gap: 0.4rem;
-}
-
-.hero-seeking li {
+.hero-mission-line {
+  font-family: var(--font-display);
+  font-style: italic;
   color: rgba(255, 255, 255, 0.88);
-  padding-left: 1.1rem;
-  position: relative;
-  font-size: 0.98rem;
-}
-
-.hero-seeking li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 0.4rem;
-  height: 0.4rem;
-  background: var(--forest);
-  border-radius: 50%;
+  margin-bottom: var(--space-lg);
 }
 
 .hero-actions {
@@ -526,55 +491,36 @@ ol {
   background: var(--white);
 }
 
-.mission {
-  background: var(--section-gray);
-}
+/* ——— What We Create (outputs) ——— */
 
-.mission-statement {
-  margin: var(--space-md) 0 0;
-  padding: 0;
-  border: none;
-}
-
-.mission-statement p {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.3vw, 1.5rem);
-  font-weight: 400;
-  line-height: 1.55;
-  color: var(--navy);
-  margin: 0;
-}
-
-/* ——— How We Help (capabilities) ——— */
-
-.how-we-help {
+.what-we-create {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.88);
 }
 
-.how-we-help .section-label {
+.what-we-create .section-label {
   color: #7eb89a;
 }
 
-.how-we-help h2,
-.how-we-help h3 {
+.what-we-create h2,
+.what-we-create h3 {
   color: var(--white);
 }
 
-.how-we-help .section-intro,
-.how-we-help .section-intro p {
+.what-we-create .section-intro,
+.what-we-create .section-intro p {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.how-we-help .card-examples-label {
+.what-we-create .card-examples-label {
   color: #a8d4bc;
 }
 
-.how-we-help .card-examples li {
+.what-we-create .card-examples li {
   color: rgba(255, 255, 255, 0.72);
 }
 
-.how-we-help .card-examples li::before {
+.what-we-create .card-examples li::before {
   color: #7eb89a;
 }
 
@@ -665,8 +611,30 @@ ol {
   margin-bottom: 0.65rem;
 }
 
-.status {
+/* ——— How We Work ——— */
+
+.how-we-work {
   background: var(--white);
+}
+
+.work-callout {
+  max-width: 42rem;
+  margin: var(--space-md) 0;
+  padding: var(--space-md);
+  border-left: 3px solid var(--forest);
+  background: var(--section-gray);
+}
+
+.work-callout p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--navy);
+  line-height: 1.55;
+}
+
+.status {
+  background: var(--section-gray);
 }
 
 /* ——— Footer ——— */
@@ -739,7 +707,7 @@ ol {
 
 @media (min-width: 1000px) {
   .capability-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .focus-grid {
